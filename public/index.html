@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhaleScope — Hedge Funds & Congress Portfolio Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>WhaleScope Dashboard</h1>
+    <p>Track major hedge fund managers, billionaire investors, and US Congress trading disclosures with market context.</p>
+    <div id="status"></div>
+  </header>
+
+  <main>
+    <section class="grid stats" id="topStats"></section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Market Pulse</h2>
+      </div>
+      <canvas id="marketChart" height="90"></canvas>
+      <div id="marketTable" class="table-wrapper"></div>
+    </section>
+
+    <section class="split">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Latest Congressional Transactions</h2>
+          <input id="congressFilter" type="text" placeholder="Filter by name/ticker/action" />
+        </div>
+        <div id="congressTable" class="table-wrapper"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Hedge Fund 13F Signals</h2>
+        </div>
+        <div id="hedgeFundCards" class="cards"></div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <h2>Coverage Watchlist</h2>
+      <div id="watchlist" class="chips"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      Data sources include Yahoo Finance quote endpoint, SEC EDGAR submissions API, and public congressional disclosure datasets.
+      Always verify decisions with primary filings before trading.
+    </small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

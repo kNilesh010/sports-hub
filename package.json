@@ -1,0 +1,10 @@
+{
+  "name": "sports-hub",
+  "version": "1.0.0",
+  "description": "Realtime-inspired hedge fund and congress portfolio tracker dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
